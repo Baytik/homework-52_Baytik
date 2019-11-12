@@ -15,3 +15,14 @@
     padding: 30px;
     margin: 0 20px;
 }
+button {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    background: white;
+    border: 3px solid black;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
