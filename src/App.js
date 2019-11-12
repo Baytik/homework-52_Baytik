@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import Circle from "./component/Circle/Circle";
-// import Person from './component/Person';
-// import Circle from "./Circle/Circle";
 
 class App extends Component {
     state = {
