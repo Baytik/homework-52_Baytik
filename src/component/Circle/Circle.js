@@ -6,5 +6,5 @@ const Circle = props => {
             {props.number}
         </div>
     )
-}
+};
 export default Circle;
