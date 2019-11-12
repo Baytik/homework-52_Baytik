@@ -1,0 +1,17 @@
+#root{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.App {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 30px;
+    margin: 0 20px;
+}
