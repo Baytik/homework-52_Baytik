@@ -5,7 +5,11 @@ import nanoid from 'nanoid';
 
 class App extends Component {
     state = {
-        tasks: [],
+        tasks: [
+            {text: 'Buy Milk', id:nanoid()},
+            {text: 'Walk with dog', id:nanoid()},
+            {text: 'Do homework', id:nanoid()},
+        ],
         task: ''
     };
 
@@ -19,12 +23,19 @@ class App extends Component {
         this.setState({tasks: [...this.state.tasks, newTask]})
     };
 
+
+
     render() {
         return (
             <div className="App">
-                <input onChange={this.changeInput} value={this.state.task} type="text" placeholder="Add new task"/>
+                <input onChange={this.changeInput}  type="text" placeholder="Add new task"/>
                 <button onClick={this.addNewTask} className="btn">Add</button>
-                {this.state.tasks.map(task => <Task key={task.id} text={task.text}/>)}
+                {this.state.tasks.map(task =>
+                    <Task
+                        key={task.id}
+                        text={task.text}
+                    />
+                )}
             </div>
         )
     }

@@ -27,6 +27,21 @@ input {
 .btn:hover {
     text-decoration: underline;
 }
-span {
+.Todo {
+    color: brown;
     border: 2px solid black;
+    width: 355px;
+    margin-top: 15px;
+    padding: 10px 0 10px 5px;
+    display: flex;
+}
+span {
+    width: 89%;
+}
+.btn-1 {
+    width: 35px;
+}
+img {
+    width: 20px;
+    cursor: pointer;
 }
