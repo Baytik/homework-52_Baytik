@@ -1,43 +1,32 @@
 import React, {Component} from 'react';
 import './App.css';
-import Circle from "./component/Circle/Circle";
+import Task from "./component/Task/Task";
+import nanoid from 'nanoid';
 
 class App extends Component {
     state = {
-        numbers: [],
+        tasks: [],
+        task: ''
     };
 
-    generateNumbers = () => {
-      let array = [];
-      for (let i = 0; i < 5;) {
-          const number = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
+    changeInput = (e) => this.setState({task: e.target.value});
 
-
-          if(array.includes(number)) {
-              continue;
-          } else {
-              array.push(number);
-              i++;
-          }
-      }
-        array.sort(function (a, b) {
-            return a - b
-        });
-      this.setState({
-          numbers: array,
-      })
+    addNewTask = () => {
+        const newTask = {
+            id: nanoid(),
+            text: this.state.task
+        };
+        this.setState({tasks: [...this.state.tasks, newTask]})
     };
 
-  render() {
+    render() {
         return (
             <div className="App">
-                {this.state.numbers.map(number => {
-                    return <Circle number={number}/>
-                })}
-                <button onClick={this.generateNumbers}>New numbers</button>
+                <input onChange={this.changeInput} value={this.state.task} type="text" placeholder="Add new task"/>
+                <button onClick={this.addNewTask} className="btn">Add</button>
+                {this.state.tasks.map(task => <Task key={task.id} text={task.text}/>)}
             </div>
         )
-  }
+    }
 }
-
 export default App;

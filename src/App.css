@@ -1,28 +1,32 @@
-#root{
+body {
+    margin: 0;
+}
+.App {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-.App {
-    margin-top: 50px;
-    padding-bottom: 50px;
-    position: relative;
-}
-.circle {
-    display: inline-block;
-    border-radius: 50%;
+input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 18px;
+    width: 250px;
+    margin-top: 20px;
     border: 2px solid black;
-    padding: 30px;
-    margin: 0 20px;
+    margin-right: 50px;
 }
-button {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 20%;
+.btn {
+    border: 2px solid black;
     background: white;
-    border: 3px solid black;
-    font-size: 24px;
     cursor: pointer;
-    padding: 5px 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 50px;
+}
+.btn:hover {
+    text-decoration: underline;
+}
+span {
+    border: 2px solid black;
 }
